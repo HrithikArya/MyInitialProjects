@@ -1,3 +1,4 @@
+#!user\\
 #code
 '''Given an unsorted array of positive and negative numbers. Your task is to create an array of alternate positive and negative numbers without changing the relative order of positive and negative numbers.
 
@@ -22,17 +23,15 @@ Input:
 Output:
 9 -2 4 -1 5 -5 0 -3 2
 '''
-a = int(input())
+a = int(input('Enter Testcases: '))
 
 for i in range(0,a) :
-    b = int(input('Length'))
-    user = input('Enter choice1')
+    b = int(input('Length: '))
+    temp = list(map(int, input('Enter list element seperated by Space: ').split()))
     main = []
     neg = []
     pos = []
-    case = []
-    temp =  int(user.split())
-    
+    print('Processing...')
     for j in range(0, b) :
         if temp[j] < 0 :
             neg.append(temp[j])
@@ -40,16 +39,10 @@ for i in range(0,a) :
             pos.append(temp[j])
 
     for j in range(0, b) :
-        if len(pos) == 0 :
+        if len(pos) == 0 or j % 2 != 0 :
             main.append(neg.pop(0))
-        elif len(neg) == 0 :
+        else :
             main.append(pos.pop(0))
-        elif j % 2 == 0 :
-            main.append(pos.pop(0))
-        elif j % 2 != 0 :
-            main.append(neg.pop(0))
-    res = ""
-    for obj in main :
-        res += obj + " "
-    print(res)
+    for item in main :
+        print(item, end=" ")
         
