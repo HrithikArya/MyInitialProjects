@@ -55,17 +55,13 @@ In sample case #4, there are no peaks.
 '''
 #-----------------------------------------------------------------------------
 
-t = int(input())
+t = int(input('Enter TestCases: '))
 for i in range(0,t) :
-    n = int(input())
-    l = list(map(int, input().split()))
+    n = int(input('No. of stop: '))
+    l = list(map(int, input('Height  of stops: ').split()))
     k = 0
     for j in range(1,len(l)-1) :
-        print(l[j],l[j-1],l[j+1])
         if l[j] > l[j-1] and l[j] > l[j+1] :
             print('raw', k)
             k = k + 1
-            print('f',k)
-        else :
-            continue
     print('Case #'+str(i+1)+':',k)
