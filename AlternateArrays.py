@@ -23,20 +23,20 @@ Input:
 Output:
 9 -2 4 -1 5 -5 0 -3 2
 '''
-a = int(input('Enter Testcases: '))
+test_cases = int(input('Enter Testcases: '))
 
-for i in range(0,a) :
-    b = int(input('Length: '))
+for test in range(0,test_cases) :
+    length = int(input('Length: '))
     temp = list(map(int, input('Enter list element seperated by Space: ').split()))
     main = []
     neg = []
     pos = []
     print('Processing...')
-    for j in range(0, b) :
-        if temp[j] < 0 :
-            neg.append(temp[j])
+    for j in temp :
+        if j < 0 :
+            neg.append(j)
         else :
-            pos.append(temp[j])
+            pos.append(j)
 
     for j in range(0, b) :
         if len(pos) == 0 or j % 2 != 0 :

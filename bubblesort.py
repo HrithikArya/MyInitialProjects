@@ -1,3 +1,4 @@
+# python
 a = [8,5,6,3,4,7,1,2]
 print(a)
 k = int(input("Enter num to search: "))
