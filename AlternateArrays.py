@@ -38,7 +38,7 @@ for test in range(0,test_cases) :
         else :
             pos.append(j)
 
-    for j in range(0, b) :
+    for j in range(0, length) :
         if len(pos) == 0 or j % 2 != 0 :
             main.append(neg.pop(0))
         else :
